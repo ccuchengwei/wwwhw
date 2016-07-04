@@ -1,0 +1,19 @@
+WWW Technologies and Applications 2016
+HOMEWORK#1
+NAME : Cheng Wei,Tsai
+CCU ID: 604410097
+Link : http://dmplus.cs.ccu.edu.tw/~s604410097/hw1/index.html click on the hyperlink "Link to Homework#1"
+
+Project files : index.html, load1.html , index.css ,load1.css
+
+ex.
+	[index.html]: Is my homepage. There are five parts.
+				  Part 1: Header includes two hyperlink to loading effect web.
+				  Part 2: Left menu includes four blocks ,and  each blocks has unique effect.
+				  Part 3: There are 4 picture which can be scrolled.
+				  Part 4:This part includes my name,a table,and 3 icons with hyperlinks to their corresponding sites.
+				  Part 5: Footer includes my name and my email address,and it fixed on page botton.
+				  
+	[index.css]: About index.html's style.
+	[load1.html]: There are loading effect and back botton inside.
+	[load1.css]: About load1.html's style.

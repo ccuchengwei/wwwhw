@@ -1,0 +1,27 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script language="JavaScript" src="js/hw2.js"></script>
+	<meta name="KeyWords" content="Hw2">
+	<meta name="Description" content="Hw2">
+	<meta name="Author" content="Cheng-wei,Tsai">
+	<title>Hw2</title>
+	<link rel="stylesheet" href="hw2.css" />
+	
+</head>
+<body>
+	<div id="mainfile">
+		<form name="xmlinfo">
+		<h1>Enter XML File</h1>
+		<input type="text" name="data" size="50" onkeydown = "if (event.keyCode == 13)document.getElementById('dosomething').click()" >
+		<br />
+		<br />
+		 <a href="basketball.xml">View XSL result for basketball.xml</a> 
+		 <br />
+		<input type="button" id="dosomething" value="Submit Query" onclick="parse_xml(xmlinfo.data)">
+		</form>
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,142 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>shoot game demo</title>
+	<link rel="icon" href="icon.png" type="image/x-icon">
+ 
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+</head>
+<body  style="background-image: url('image.jpg');background-repeat: no-repeat; background-attachment: fixed; background-position: center; background-size: cover;">
+	<script src="http://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="jquery.js"></script>
+
+    <audio id="Hit" src="Hit.wav"></audio>
+    <audio id="Shoot" src="Shoot.wav"></audio>
+
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="navbar-header">
+  
+    <a class="navbar-brand" style="position: absolute;width: 100%;left: 0;margin:0 auto; text-align: center;color:white;" href="#">Shoot Game!!</a>
+  </div>
+
+
+</nav>
+  <div style="height:80px">
+      <div class="col-xs-1 col-md-1"></div>
+      <button id="okbtn" class="col-xs-3 col-md-3 btn btn-warning" type="button" style="width:200px; border-bottom:10px 	#C63300 solid ;" onclick="gamestart()">OK</button>
+      <div class="col-xs-1 col-md-1"></div>
+      <button class="col-xs-3 col-md-3 btn btn-warning" type="button" style="width:200px; border-bottom:10px 	#C63300 solid ;" onclick="rule()">Click me show Rule</button>
+      <div class="col-xs-2 col-md-2"></div>
+      <button id="rankbtn" class="col-xs-3 col-md-3 btn btn-warning" type="button" style="width:200px; border-bottom:10px 	#C63300 solid ;"onclick="rank()">Rank</button>
+      
+  </div>
+   <div class="col-xs-1 col-md-1"></div>
+    <div >
+  <table style="background-color:black; border:3px #cccccc solid ; text-align:center;height:400px;width:300px;" cellspacing="10" border='1'>
+      <tr>
+        <td id="td1" style="height: 115px;" ><button  id="btn1" style="background-color:black; border:3px #FFFFFF solid;" onclick="selectcheck(1)"> <img  class="btnpicture" id="img1"  src = "1.png" style="height:100px;width:100px;"></img> </button></td>
+        <td id="td1" style="height: 115px;"><button  id="btn2" style=" background-color:black; border:3px #FFFFFF solid;" onclick="selectcheck(2)"><img id="img2"  src = "2.png" style="height:100px;width:100px;"></img></button></td>
+      </tr>
+      <tr>
+        <td id="td1" style="height: 115px;"><button  id="btn3" style=" background-color:black; border:3px #FFFFFF solid;" onclick="selectcheck(3)"><img id="img3"  src = "3.png" style="height:100px;width:100px;"></img></button></td>
+        <td id="td1" style="height: 115px;"><button  id="btn4" style=" background-color:black; border:3px #FFFFFF solid;" onclick="selectcheck(4)"><img id="img4"  src = "4.png" style="height:100px;width:100px;"></img></button></td>
+      </tr>
+      <tr>
+        <td id="td1" style="height: 115px;"><button  id="btn5" style=" background-color:black; border:3px #FFFFFF solid;" onclick="selectcheck(5)"><img id="img5"  src = "5.png" style="height:100px;width:100px;"></img></button></td>
+        <td id="td1" style="height: 115px;"><button  id="btn6" style=" background-color:black; border:3px #FFFFFF solid;" onclick="selectcheck(6)"><img id="img6"  src = "6.png" style="height:100px;width:100px;"></img></button></td>
+      </tr>
+  </table>
+
+  
+    <div  style="position:absolute;left:40%;top:20%;height:700px;width:700px;">
+  
+     <canvas id="scene" width="700" height="700" tabindex="1"></canvas>
+  
+    </div>
+    
+
+
+<style>
+#holder { border: 10px dashed #ccc; width: 300px; height: 300px; margin: 20px auto;}
+#holder.hover { border: 10px dashed #333; }
+ul li
+{
+list-style-type:none;
+}
+</style>
+<div style="position:absolute; left:8%;top:65%;text-align:center;">
+    <p style="background-color:black;color:yellow;">你可以拖曳敵人的圖片到方格中<p/>
+  <div id="holder" ></div> 
+  
+  
+</div>
+<div id="rankhistory" style="border:3px #FFFF33 solid;background-color:black;position:absolute;left:40%;top:20%;height:500px;width:500px;text-align:center;">
+   
+   <table style="color:white;text-align:left;font-size:25px;height:400px;width:500px;">
+   <tr> <td>Rank</td><td >Name</td><td >Score</td></tr>
+   <tr> <td>Rank1</td><td id="player1"></td><td id="score1"></td></tr>
+   <tr> <td>Rank2</td><td id="player2"></td><td id="score2"></td></tr>
+   <tr> <td>Rank3</td><td id="player3"></td><td id="score3"></td></tr>
+   <tr> <td>Rank4</td><td id="player4"></td><td id="score4"></td></tr>
+   <tr> <td>Rank5</td><td id="player5"></td><td id="score5"></td></tr>
+   <tr> <td>Rank6</td><td id="player6"></td><td id="score6"></td></tr>
+   <tr> <td>Rank7</td><td id="player7"></td><td id="score7"></td></tr>
+   <tr> <td>Rank8</td><td id="player8"></td><td id="score8"></td></tr>
+   <tr> <td>Rank9</td><td id="player9"></td><td id="score9"></td></tr>
+   <tr> <td>Rank10</td><td id="player10"></td><td id="score10"></td></tr>
+   </table>
+
+    <button class="btn btn-info" onclick="closescore()" style="font-size:25px;">close</button>
+</div>
+<script>
+        $(document).ready(function(){
+        document.getElementById("okbtn").disabled = true;
+        $("#rankhistory").hide();
+        });
+        
+        
+        
+        var holder = document.getElementById('holder');
+
+        
+    
+        holder.ondragover = function () { this.className = 'hover'; return false; };
+        holder.ondragend = function () { this.className = ''; return false; };
+        holder.ondrop = function (e) {
+          this.className = '';
+          e.preventDefault();
+
+          var file = e.dataTransfer.files[0],
+            reader = new FileReader();
+            reader.onload = function (event) {
+            console.log(event.target);
+            holder.style.background = 'url(' + event.target.result + ') no-repeat center';
+            holder.style.backgroundSize = "300px 300px";
+            change_enemy(event.target.result);
+          };
+          console.log(file);
+          reader.readAsDataURL(file);
+
+          return false;
+        };
+</script>
+  </div>
+
+        
+
+           
+
+        
+
+	
+</body>
+</html>

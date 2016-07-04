@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Japan_food>
+	<food>
+		<foodname>Chicken and egg donburi</foodname>
+		<price>$5.95</price>
+		<description>chicken, egg, sliced scallion , and other ingredients are all simmered together in a sauce and then served on top of a large bowl of rice</description>
+		<calories>800</calories>
+	</food>
+	<food>
+		<foodname>Pork chop and egg donburi</foodname>
+		<price>$7.95</price>
+		<description>a bowl of rice topped with a deep-fried pork cutlet, egg, and condiments</description>
+		<calories>900</calories>
+	</food>
+	<food>
+		<foodname>Soba noodle</foodname>
+		<price>$8.95</price>
+		<description> It is synonymous with a type of thin noodle made from buckwheat flour, and in Japan can refer to any thin noodle</description>
+		<calories>900</calories>
+	</food>
+	<food>
+		<foodname>Sushi</foodname>
+		<price>$4.50</price>
+		<description>Sushi is not raw fish, but rather vinegared rice that is mixed with other ingredients, which may or may not include raw fish</description>
+		<calories>600</calories>
+	</food>
+	<food>
+		<foodname>Sashimi</foodname>
+		<price>$9.95</price>
+		<description>is thinly sliced raw meat¡Xusually fish, such as salmon or tuna</description>
+		<calories>750</calories>
+	</food>
+</Japan_food>

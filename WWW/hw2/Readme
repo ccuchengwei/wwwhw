@@ -1,0 +1,17 @@
+WWW Technologies and Applications 2016
+HOMEWORK#2
+NAME : Cheng Wei,Tsai
+CCU ID: 604410097
+Link : http://dmplus.cs.ccu.edu.tw/~s604410097/hw1/index.html click on the hyperlink "Link to Homework#2"
+
+Project files : index.html,hw2.css ,hw2.js
+
+ex.
+	[index.html]: You can take the URL of an XML document containing two types of information, parses the XML file, 
+				  and displays the data as two separate tables in an HTML web page.
+				  You only enter URL ,and then press "Enter Key" or press button "Submit Query".
+                  It will show error message when you click the Submit Query button if text box is empty or error URL.
+	
+	[hw2.css]:  style design about index.html. 	
+	[hw2.js]:	Java script about parses xml.
+	

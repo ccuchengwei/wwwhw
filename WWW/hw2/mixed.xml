@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mixedteams>
+	<food>
+		<foodname>Chicken and egg donburi</foodname>
+		<price>$5.95</price>
+		<description>chicken, egg, sliced scallion , and other ingredients are all simmered together in a sauce and then served on top of a large bowl of rice</description>
+		<calories>800</calories>
+	</food>
+	<food>
+		<foodname>Pork chop and egg donburi</foodname>
+		<price>$7.95</price>
+		<description>a bowl of rice topped with a deep-fried pork cutlet, egg, and condiments</description>
+		<calories>900</calories>
+	</food>
+	<food>
+		<foodname>Soba noodle</foodname>
+		<price>$8.95</price>
+		<description> It is synonymous with a type of thin noodle made from buckwheat flour, and in Japan can refer to any thin noodle</description>
+		<calories>900</calories>
+	</food>
+	<food>
+		<foodname>Sushi</foodname>
+		<price>$4.50</price>
+		<description>Sushi is not raw fish, but rather vinegared rice that is mixed with other ingredients, which may or may not include raw fish</description>
+		<calories>600</calories>
+	</food>
+	<food>
+		<foodname>Sashimi</foodname>
+		<price>$9.95</price>
+		<description>is thinly sliced raw meat usually fish, such as salmon or tuna</description>
+		<calories>750</calories>
+	</food>
+	<basketball>
+		<Team>Lakers</Team>
+		<City>Los Angeles</City>
+		<Color>Yellow</Color>
+		<BColor>Purple</BColor>
+		<Image>http://i.cdn.turner.com/nba/nba/.element/img/1.0/teamsites/logos/teamlogos_500x500/lal.png</Image>
+		<All-star>
+			<name>Kobe Bryant</name>
+			<age>37</age>
+			<position>Shooting Guard</position>
+		</All-star>
+		<Coach>Byron Scott</Coach>
+		<Stadium>Staples Center</Stadium>
+		<Video>https://www.youtube.com/embed/itIvUYr5UZI</Video>
+	</basketball>
+	<basketball>
+		<Team>Cavaliers</Team>
+		<City>Cleveland</City>
+		<Color>Red</Color>
+		<BColor>Yellow</BColor>
+		<Image>http://i.cdn.turner.com/nba/nba/.element/img/1.0/teamsites/logos/teamlogos_500x500/cle.png</Image>
+		<All-star>
+			<name>LeBron James</name>
+			<age>31</age>
+			<position>Small Forward</position>
+		</All-star>
+		<Coach>Tyronn Lue</Coach>
+		<Stadium>Quicken Loans Arena</Stadium>
+		<Video>https://www.youtube.com/embed/YCOgaWSfxxs</Video>
+	</basketball>
+	<basketball>
+		<Team>Warriors</Team>
+		<City>Golden State</City>
+		<Color>Yellow</Color>
+		<BColor>Blue</BColor>
+		<Image>http://i.cdn.turner.com/nba/nba/.element/img/1.0/teamsites/logos/teamlogos_500x500/gsw.png</Image>
+		<All-star>
+			<name>Stephen Curry</name>
+			<age>27</age>
+			<position>Point Guard</position>
+		</All-star>
+		<Coach>Steve Kerr</Coach>
+		<Stadium>Oracle Arena</Stadium>
+		<Video>https://www.youtube.com/embed/nubIjS7LiEY</Video>
+	</basketball>
+	<basketball>
+		<Team>Spurs</Team>
+		<City>San Antonio</City>
+		<Color>White</Color>
+		<BColor>Black</BColor>
+		<Image>http://i.cdn.turner.com/nba/nba/.element/img/1.0/teamsites/logos/teamlogos_500x500/SAS.png</Image>
+		<All-star>
+			<name>Timothy Theodore Duncan</name>
+			<age>39</age>
+			<position>Power Forward</position>
+		</All-star>
+		<Coach>Gregg Popovich</Coach>
+		<Stadium>ATNT Center</Stadium>
+		<Video>https://www.youtube.com/embed/3uTCIPiuG5A</Video>
+	</basketball>
+	<basketball>
+		<Team>Thunder</Team>
+		<City>Oklahoma</City>
+		<Color>Blue</Color>
+		<BColor>Orange</BColor>
+		<Image>http://i.cdn.turner.com/nba/nba/.element/img/1.0/teamsites/logos/teamlogos_500x500/okc.png</Image>
+		<All-star>
+			<name>Kevin Durant</name>
+			<age>27</age>
+			<position>Small Forward</position>
+		</All-star>
+		<Coach>Billy Donovan</Coach>
+		<Stadium>Chesapeake Energy Arena</Stadium>
+		<Video>https://www.youtube.com/embed/4DoLkHDq70s</Video>
+	</basketball>
+</mixedteams>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>bootstrap test</title>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	
+</head>
+<body>
+    <script src="http://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+     <p id="test">123</p>
+     <script>
+       function yo(){alert($('#test').val());}
+     </script>
+
+             <p>0.0</p>
+             <div class="form-group">
+                <label for="Title">標題</label>
+                 <input type="text" placeholder="Title" class="form-control " id="Title"  name="Title" >
+             </div >
+              <br/>
+            <label for="edit_div">文章</label>
+            <br/>
+                    <button class="btn btn-default active" id="codebtn" onclick='tcode()'>Code</button>
+                    <button class="btn btn-default" id="htmlbtn" onclick='thtml()'>HTML</button>
+                    <button class="btn btn-default" onclick='fontStyle("b");'>B</button>
+                    <button class="btn btn-default" onclick='fontStyle("i");'>I</button>
+                    <button class="btn btn-default" id="ytbtn" onclick=" ytshow()"><i class="fa fa-video-camera" aria-hidden="true"></i></button>
+                    <button class="btn btn-danger"  onclick='fontStyle("red");' ><u>A</u></button>
+                    <button class="btn btn-success" onclick='fontStyle("green");' ><u>A</u></button>
+                    <button class="btn btn-primary" onclick='yo()' ><u>A</u></button>
+                    <br/>
+                    <br/>
+                   
+                        <div class="input-group" style="display: none" id="ytdiv"> 
+                        <button class="input-group-addon" >https://www.youtube.com/watch?v=</button>
+                        <input type="text" id="ytid" class="form-control" style="width:120px;"  placeholder="video ID"></input>
+                         <span class="btn btn-default" onclick="onyt()" >Insert</span>
+                        </div>
+                  
+                    <div id="edit_div" contenteditable="false" style="width:500px;height:500px;" ><textarea name="sourcecode" id="sourcecode"  style="width:500px;height:500px;"></textarea></div>
+                   
+                    
+                    <style> 
+                        Red {
+                          color:red;
+                          
+                        }
+                        Green {
+                          color:green;
+                          
+                        }
+                        Blue {
+                          color:blue;
+                          
+                        }
+                    </style>
+           
+                
+                <button type="submit" class="btn btn-success" id="createarticle" name="createarticle" >Create & Login</button>
+                        
+    <script>
+
+            $(function() {
+                   $('#codebtn').attr('disabled',true);
+                   $('#edit_div').attr('contenteditable',false);
+                   $('#ytdiv').hide();
+                   
+                });
+             var code_check = 1;
+            function tcode(){
+            $('#edit_div').attr('contenteditable',false);
+               var content1 = $('#edit_div').html();
+               $('#edit_div').html("<textarea name='sourcecode' id='sourcecode'  style='width:800px;height:800px;'>"+content1+"</textarea>");
+               $('#codebtn').addClass("active");
+               $('#htmlbtn').removeClass("active");
+               $('#codebtn').attr('disabled',true);
+               $('#htmlbtn').attr('disabled',false);
+               code_check = 1;
+            }
+            function thtml(){
+                $('#edit_div').attr('contenteditable',true);
+               var content1 = $('#sourcecode').val();
+               
+               $('#sourcecode').remove();
+               $('#edit_div').html(content1);
+               $('#htmlbtn').addClass("active");
+               $('#codebtn').removeClass("active");
+               $('#htmlbtn').attr('disabled',true);
+               $('#codebtn').attr('disabled',false);
+               code_check = 0;
+              
+            }
+            function fontStyle(s) {
+              if (s == "b") {
+                if(code_check)
+                 {
+                    
+                   $('#sourcecode').val(textSelection(s)); 
+                 }
+                 else
+                 {
+                    document.execCommand("bold"); 
+                 }
+              } 
+              else if (s == "i") {
+                 if(code_check)
+                 {
+                    
+                   $('#sourcecode').val(textSelection(s)); 
+                 }
+                 else
+                 {
+                    document.execCommand("Italic"); 
+                 }
+              }
+              else if (s == "red") {
+                 if(code_check)
+                 {
+                    
+                   $('#sourcecode').val(textSelection("Red")); 
+                 }
+                 else
+                {document.execCommand("foreColor",false,"red");}
+              }
+              else if (s == "green") {
+                  if(code_check)
+                 {
+                    
+                   $('#sourcecode').val(textSelection("Green")); 
+                 }
+                 else
+                {document.execCommand("foreColor",false,"green");}
+              }
+              else if (s == "blue") {
+             if(code_check)
+                 {
+                    
+                   $('#sourcecode').val(textSelection("Blue")); 
+                 }
+                 else
+                {document.execCommand("foreColor",false,"blue");}
+              }
+            }
+                function textSelection(str)
+                    {
+                    var textComponent = document.getElementById('sourcecode');
+                    var selectedText;
+
+                    // Mozilla version
+                    if (textComponent.selectionStart != undefined)
+                    {
+                    var startPos = textComponent.selectionStart;
+                    var endPos = textComponent.selectionEnd;
+                    selectedText = textComponent.value.substring(startPos, endPos)
+                    var prefix = textComponent.value.substring(0,startPos);
+                    var suffix = textComponent.value.substring(endPos);
+                    }
+                      
+                     return prefix+"<"+str+">"+selectedText+"</"+str+">"+suffix;
+                    }
+                    var yt_check = 0;
+                    
+                 var video_count=0;
+                function ytshow(){
+                
+                    if(yt_check)
+                    {
+                    $('#ytdiv').hide();
+                    $('#ytbtn').removeClass("active");
+                    yt_check = 0;
+                    }
+                    else
+                    {
+                    $('#ytdiv').show(); 
+                    $('#ytbtn').addClass("active");
+                    yt_check = 1;
+                    }
+                    
+                    }
+                    
+
+              function onyt(){
+              if(code_check)
+                 {
+                    var textComponent = document.getElementById('sourcecode');
+                    var selectedText;
+
+                    // Mozilla version
+                    if (textComponent.selectionStart != undefined)
+                    {
+                    var startPos = textComponent.selectionStart;
+                    var endPos = textComponent.selectionEnd;
+                    selectedText = textComponent.value.substring(startPos, endPos)
+                    var prefix = textComponent.value.substring(0,startPos);
+                    var suffix = textComponent.value.substring(endPos);
+                    }
+                       $('#sourcecode').val(prefix+'<iframe width="400" height="300" src="https://www.youtube.com/embed/'+$('#ytid').val()+'" frameborder="0" allowfullscreen></iframe>'+suffix); 
+                     
+                  
+                 }
+               else
+                {
+                    document.execCommand('insertHTML', null, '<iframe width="420" height="315" src="https://www.youtube.com/embed/'+$('#ytid').val()+'" frameborder="0" allowfullscreen></iframe>');
+                }
+              }
+              
+              
+
+
+    </script>
+    
+    
+
+
+
+	
+</body>
+</html>
